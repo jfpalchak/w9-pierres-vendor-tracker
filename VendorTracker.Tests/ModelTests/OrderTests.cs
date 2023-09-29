@@ -12,7 +12,7 @@ namespace VendorTracker.Tests
     {
       Order.ClearAll();
     }
-    
+
     [TestMethod]
     public void OrderConstructor_CreatesInstanceOfOrder_Order()
     {
@@ -80,6 +80,19 @@ namespace VendorTracker.Tests
       Order newOrder1 = new Order("Title", "Description", 10, "Date");
       Order newOrder2 = new Order("Title", "Description", 20, "Date");
       List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      List<Order> result = Order.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void ClearAll_ClearsListOfAllOrders_Void()
+    {
+      List<Order> newList = new List<Order> { };
+      Order newOrder1 = new Order("Title", "Description", 10, "Date");
+      Order newOrder2 = new Order("Title", "Description", 20, "Date");
+      Order.ClearAll();
 
       List<Order> result = Order.GetAll();
 
