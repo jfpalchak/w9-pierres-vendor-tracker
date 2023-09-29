@@ -38,6 +38,27 @@ namespace VendorTracker.Tests
     }
 
     [TestMethod]
-    
+    public void GetOrders_ReturnsEmptyListOfVendorOrders_OrderList()
+    {
+      Vendor newVendor = new Vendor("Sally's", "Bi-Weekly Order");
+      List<Order> newList = new List<Order> { };
+
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void AddOrder_AddsOrderToVendorsListOfOrders_OrderList()
+    {
+      Vendor newVendor = new Vendor("Sally's", "Bi-Weekly Order");
+      Order newOrder = new Order("Bread Order", "2 Orders", 10, "9/29/2023");
+      List<Order> newList = new List<Order> { newOrder };
+
+      newVendor.AddOrder(newOrder);
+      List<Order> result = newVendor.Orders;
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
