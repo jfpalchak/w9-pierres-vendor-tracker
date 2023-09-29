@@ -6,6 +6,16 @@
 
 <div class="container">
   <h1>Order Details</h1>
-  <h3>Title:</h3>
-  <h3></h3>
+</div>
+
+<div class="container">
+  <h3>@Model["order"].Date</h3>
+  <h3>@Model["order"].Title</h3>
+  <h4>Description: @Model["order"].Description</h4>
+  <h4>Order Price: $@Model["order"].Price</h4>
+</div>
+
+<div class="container">
+  <h5><a href='/vendors/@Model["vendor"].Id/'>Back to Vendor Page for @Model["vendor"].Name</a></h5>
+  <h5><a href="/vendors">Back to Vendors</a></h5>
 </div>
