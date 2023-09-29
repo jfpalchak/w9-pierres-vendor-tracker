@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@using VendorTracker.Models
+
+<div class="container">
+  <h1>Vendor Information</h1>
+  <h3>Edit Information for @Model.Name</h3>
+</div>
+
+<div class="container">
+  <form action="update" method="post">
+    <label for="vendorName">Vendor's Name:</label>
+    <br />
+    <input id="vendorName" name="vendorName" type="text" placeholder="@Model.Name">
+    <br />
+    <label for="vendorDescription">Vendor's Description:</label>
+    <br />
+    <input id="vendorDescription" name="vendorDescription" type="text" placeholder="@Model.Description">
+    <br />
+    <br />
+    <button type="submit" class="btn btn-success">Edit Vendor</button>
+  </form>
+
+  <form action="delete" method="post">
+    <button type="submit" class="btn btn-danger">Delete</button>
+  </form>
+</div>
+
+<div class="links container">
+  <h5><a href="/vendors/@Model.Id">Back to Vendor Page for @Model.Name</a></h5>
+  <h5><a href="/vendors">Back to Vendors</a></h5>
+</div>
