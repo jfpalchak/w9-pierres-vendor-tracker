@@ -10,12 +10,12 @@
 
 @if (@Model.Count == 0)
 {
-  <div class="container">
+  <div class="empty container">
     <h3>There are currently no vendors.</h3>
   </div>
 }
 
-<div class="container">
+<div class="display-list container">
   <ul>
     @foreach (Vendor vendor in @Model)
     {
@@ -24,7 +24,7 @@
   </ul>
 </div>
 
-<div class="container">
-  <h5><a href="/vendors/new">Add a New Vendor</a></h5>
-  <h5><a href="/">Back to Home Page</a></h5>
+<div class="links container">
+  <h4><a href="/vendors/new">Add a New Vendor</a></h4>
+  <h6><a href="/">Back to Home Page</a></h6>
 </div>

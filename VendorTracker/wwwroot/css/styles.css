@@ -1,0 +1,21 @@
+
+.content {
+  border: solid black 1px;
+  border-radius: 10px;
+  margin: 200px auto;
+  padding: 50px;
+  text-align: center;
+}
+
+.display-list {
+  text-align: start;
+  padding-top: 20px;
+}
+
+.links {
+  padding-top: 40px;
+}
+
+.empty {
+  margin-top: 50px;
+}

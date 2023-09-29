@@ -12,12 +12,12 @@
 
 @if (@Model.Orders.Count == 0)
 {
-  <div class="container">
+  <div class="empty container">
     <h4>This vendor currently has no orders.</h4>
   </div>
 }
 
-<div class="container">
+<div class="display-list container">
   <ul>
     @foreach (Order order in @Model.Orders)
     {
@@ -26,7 +26,7 @@
   </ul>
 </div>
 
-<div class="container">
+<div class="links container">
   <h5><a href="/vendors/@Model.Id/orders/new">Add a New Order</a></h5>
   <h5><a href="/vendors">Back to Vendors</a></h5>
 </div>
