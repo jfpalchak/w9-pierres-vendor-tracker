@@ -70,5 +70,15 @@ namespace VendorTracker.Controllers
 
       return View("Show", foundVendor);
     }
+
+    // Upon submitting Delete form, Delete the specified Vendor
+    [HttpPost("/vendors/{vendorId}/delete")]
+    public ActionResult Delete(int vendorId)
+    {
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Vendor.GetAll().Remove(foundVendor);
+      
+      return RedirectToAction("Index");
+    }
   }
 }
