@@ -1,5 +1,5 @@
 using Microsoft.AspNetCore.Mvc;
-// USING DIRECTIVES HERE
+using VendorTracker.Models;
 
 namespace VendorTracker.Controllers
 {
