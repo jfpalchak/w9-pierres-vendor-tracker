@@ -21,15 +21,6 @@ namespace VendorTracker.Controllers
     {
       return View();
     }
-
-    // Get the form to Edit a specified Vendor
-    [HttpGet("/vendors/{vendorId}/edit")]
-    public ActionResult Edit(int vendorId)
-    {
-      Vendor foundVendor = Vendor.Find(vendorId);
-
-      return View(foundVendor);
-    }
     
     // Upon submitting the form, Create the new Vendor and redirect to root path
     // (CR asks for user to be routed back to the "homepage" - which homepage? Assuming Vendor homepage.)
@@ -56,6 +47,26 @@ namespace VendorTracker.Controllers
       Vendor foundVendor = Vendor.Find(vendorId);
       Order newOrder = new Order(title, description, price, date);
       foundVendor.AddOrder(newOrder);
+
+      return View("Show", foundVendor);
+    }
+
+    // Get the form to Edit a specified Vendor
+    [HttpGet("/vendors/{vendorId}/edit")]
+    public ActionResult Edit(int vendorId)
+    {
+      Vendor foundVendor = Vendor.Find(vendorId);
+
+      return View(foundVendor);
+    }
+    
+    // Upon submitting Edit form, Update the specified Vendor
+    [HttpPost("/vendors/{vendorId}")]
+    public ActionResult Update(int vendorId, string newName, string newDescription)
+    {
+      Vendor foundVendor = Vendor.Find(vendorId);
+      foundVendor.Name = newName;
+      foundVendor.Description = newDescription;
 
       return View("Show", foundVendor);
     }

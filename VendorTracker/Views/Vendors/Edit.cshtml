@@ -10,21 +10,22 @@
 </div>
 
 <div class="container">
-  <form action="update" method="post">
-    <label for="vendorName">Vendor's Name:</label>
+  <form action="/vendors/@Model.Id" method="post">
+    <label for="newName">Vendor's Name:</label>
     <br />
-    <input id="vendorName" name="vendorName" type="text" placeholder="@Model.Name">
+    <input id="newName" name="newName" type="text" placeholder="@Model.Name" required>
     <br />
-    <label for="vendorDescription">Vendor's Description:</label>
+    <label for="newDescription">Vendor's Description:</label>
     <br />
-    <input id="vendorDescription" name="vendorDescription" type="text" placeholder="@Model.Description">
+    <input id="newDescription" name="newDescription" type="text" placeholder="@Model.Description" required>
     <br />
     <br />
-    <button type="submit" class="btn btn-success">Edit Vendor</button>
+    <button type="submit" class="btn btn-success">Update Vendor</button>
   </form>
-
+  <br/>
   <form action="delete" method="post">
-    <button type="submit" class="btn btn-danger">Delete</button>
+    <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
+    @* <button type="submit" class="btn btn-danger">Delete Vendor</button> *@
   </form>
 </div>
 
