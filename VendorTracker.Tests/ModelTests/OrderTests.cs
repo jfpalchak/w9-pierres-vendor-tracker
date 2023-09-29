@@ -98,5 +98,15 @@ namespace VendorTracker.Tests
 
       CollectionAssert.AreEqual(newList, result);
     }
+
+    [TestMethod]
+    public void GetId_OrdersAreInstantiatedWithAnIdAndGetterReturnsId_Int()
+    {
+      Order newOrder = new Order("Title", "Description", 10, "Date");
+
+      int result = newOrder.Id;
+
+      Assert.AreEqual(1, result);
+    }
   }
 }
