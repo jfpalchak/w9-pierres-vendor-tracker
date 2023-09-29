@@ -18,13 +18,23 @@ namespace VendorTracker.Models
       Description = vendorDescription;
       Orders = new List<Order> {};
 
-      // _instances.Add(this);
-      // Id = _instances.Count;
+      _instances.Add(this);
+      Id = _instances.Count;
     }
 
     public void AddOrder(Order newOrder)
     {
       Orders.Add(newOrder);
+    }
+
+    public static List<Vendor> GetAll()
+    {
+      return _instances;
+    }
+    
+    public static void ClearAll()
+    {
+      _instances.Clear();
     }
   }
 }
