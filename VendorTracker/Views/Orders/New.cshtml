@@ -9,18 +9,18 @@
 </div>
 
 <div class="container">
-  <form action="" method="post">
-    <label>Enter a Title:</label>
-    <input>
+  <form action="/vendors/@Model.Id/orders" method="post">
+    <label for="title">Enter a Title:</label>
+    <input id="title" name="title" type="text" required>
 
-    <label>Enter a Description:</label>
-    <input>
+    <label for="description">Enter a Description:</label>
+    <input id="description" name="description" type="text" required>
 
-    <label>Enter a Price:</label>
-    <input>
+    <label for="price">Enter a Price:</label>
+    <input id="price" name="price" type="number" required>
 
-    <label>Enter the Date:</label>
-    <input>
+    <label for="date">Enter the Date:</label>
+    <input id="date" name="date" type="text" required>
 
     <button type="submit">Add Order</button>
   </form>
