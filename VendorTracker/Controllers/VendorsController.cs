@@ -22,8 +22,7 @@ namespace VendorTracker.Controllers
       return View();
     }
     
-    // Upon submitting the form, Create the new Vendor and redirect to root path
-    // (CR asks for user to be routed back to the "homepage" - which homepage? Assuming Vendor homepage.)
+    // Create a new Vendor
     [HttpPost("/vendors")]
     public ActionResult Create(string vendorName, string vendorDescription)
     {
@@ -40,7 +39,7 @@ namespace VendorTracker.Controllers
       return View(foundVendor);
     }
 
-    // Upon submitting the form, Create a new Order for specified Vendor, and display Order on Vendor page
+    // Create a new Order for a specified Vendor, and display Order on Vendor's page
     [HttpPost("/vendors/{vendorId}/orders")]
     public ActionResult Create(int vendorId, string title, string description, float price, string date)
     {
@@ -60,7 +59,7 @@ namespace VendorTracker.Controllers
       return View(foundVendor);
     }
     
-    // Upon submitting Edit form, Update the specified Vendor
+    // Update the specified Vendor
     [HttpPost("/vendors/{vendorId}")]
     public ActionResult Update(int vendorId, string newName, string newDescription)
     {
@@ -71,7 +70,7 @@ namespace VendorTracker.Controllers
       return View("Show", foundVendor);
     }
 
-    // Upon submitting Delete form, Delete the specified Vendor
+    // Delete the specified Vendor
     [HttpPost("/vendors/{vendorId}/delete")]
     public ActionResult Delete(int vendorId)
     {
@@ -81,7 +80,7 @@ namespace VendorTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    // Upon submitting Delete form, Delete the specified Order
+    // Delete the specified Order from both the Vendor's list and the Order class static list
     [HttpPost("/vendors/{vendorId}/orders/{orderId}/delete")]
     public ActionResult Delete(int vendorId, int orderId)
     {

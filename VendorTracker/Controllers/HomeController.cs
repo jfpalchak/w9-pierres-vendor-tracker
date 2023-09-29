@@ -5,6 +5,7 @@ namespace VendorTracker.Controllers
 {
   public class HomeController : Controller
   {
+    // Get project's splash page
     [HttpGet("/")]
     public ActionResult Index()
     {
