@@ -12,23 +12,30 @@
 <div class="container">
   <form action='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id' method="post">
     <label for="newTitle">Edit Title:</label>
-    <input id="newTitle" name="newTitle" type="text" value='@Model["order"].Title'>
+    <input id="newTitle" name="newTitle" type="text" value='@Model["order"].Title' required>
     <br />
     <label for="newDescription">Edit Description:</label>
-    <input id="newDescription" name="newDescription" type="text" value='@Model["order"].Description'>
+    <input id="newDescription" name="newDescription" type="text" value='@Model["order"].Description' required>
     <br />
     <label for="newPrice">Edit Price:</label>
-    <input id="newPrice" name="newPrice" type="number" value='@Model["order"].Price'>
+    <input id="newPrice" name="newPrice" type="number" value='@Model["order"].Price' required>
     <br />
     <label for="newDate">Edit Date:</label>
-    <input id="newDate" name="newDate" type="text" value='@Model["order"].Date'>
+    <input id="newDate" name="newDate" type="text" value='@Model["order"].Date' required>
     <br />
     <br />
     <button type="submit" class="btn btn-success">Update Order</button>
+  </form>
+
+  <br/>
+  <form action='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id/delete' method="post">
+    <input id="vendorId" name="vendorId" type="hidden" value='@Model["vendor"].Id'>
+    <input id="orderId" name="orderId" type="hidden" value='@Model["order"].Id'>
+    <button type="submit" class="btn btn-danger">Delete Order</button>
   </form>
 </div>
 
 <div class="links container">
   <h5><a href='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id'>Back to Order Details</a></h5>
-  <h5><a href="/vendors">Back to Vendors</a></h5>
+  <h5><a href='/vendors/@Model["vendor"].Id'>Back to Orders</a></h5>
 </div>
