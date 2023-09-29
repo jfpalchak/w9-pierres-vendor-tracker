@@ -22,10 +22,12 @@
     <br />
     <button type="submit" class="btn btn-success">Update Vendor</button>
   </form>
+
   <br/>
-  <form action="delete" method="post">
+  
+  <form action="/vendors/@Model.Id/delete" method="post">
     <input id="vendorId" name="vendorId" type="hidden" value="@Model.Id">
-    @* <button type="submit" class="btn btn-danger">Delete Vendor</button> *@
+    <button type="submit" class="btn btn-danger">Delete Vendor</button>
   </form>
 </div>
 
