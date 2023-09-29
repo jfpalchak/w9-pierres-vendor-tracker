@@ -2,7 +2,7 @@
 
 #### By _Joey Palchak_
 
-#### _{SHORT DESCRIPTION}_
+#### _An MVC application that tracks vendors and their orders for a fictional bakery._
 
 ## Technologies Used
 
@@ -13,27 +13,26 @@
 
 ## Description
 
-{DESCRIPTION}
+An MVC application that tracks vendors and their orders for a fictional bakery.
 
 ## Setup/Installation Requirements
 
-1. Copy the **[URL](#LINK)** provided for this repository.
+1. Copy the **[URL](https://github.com/jfpalchak/w9-pierres-vendor-tracker.git)** provided for this repository.
 2. Open Terminal.
 3. Change your working directory to where you want the cloned directory.
 4. In your terminal, type `git clone` and use the copied URL from Step 1. Or, copy the following git command:
 ```bash
-$ git clone #URL
+$ git clone https://github.com/jfpalchak/w9-pierres-vendor-tracker.git
 ```
-5. Open your terminal and navigate to this project's production directory called `{PROJECT NAME}`.
-6. In the command line, run the following command to compile and execute the console application:
+5. Open your terminal and navigate to this project's production directory called `VendorTracker`.
+6. In the command line, run the following command to compile and launch the web application:
    
 ```bash
 $ dotnet run
 ```
-> Since this is a console application, you'll interact with it through text commands in your terminal.
-> Optionally, you can run `dotnet build` to compile this console app without running it.
+> Optionally, you can run `dotnet build` to compile this web app without running it.
 
-7. To run tests on the project's models, navigate to the test directory, `{PROJECT NAME}.Tests`.
+7. To run tests on the project's models, navigate to the test directory, `VendorTracker.Tests`.
 8. In the command line, run the following command to execute tests:
 ```bash
 $ dotnet test
