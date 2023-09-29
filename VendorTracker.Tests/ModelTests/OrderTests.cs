@@ -59,14 +59,26 @@ namespace VendorTracker.Tests
       Assert.AreEqual(date, result);
     }
 
-    // [TestMethod]
-    // public void GetAll_ReturnsEmptyList_OrderList()
-    // {
-    //   List<Order> newList = new List<Order> {};
+    [TestMethod]
+    public void GetAll_ReturnsEmptyList_OrderList()
+    {
+      List<Order> newList = new List<Order> {};
 
-    //   List<Order> result = Order.GetAll();
+      List<Order> result = Order.GetAll();
 
-    //   CollectionAssert.AreEqual(newList, result);
-    // }
+      CollectionAssert.AreEqual(newList, result);
+    }
+
+    [TestMethod]
+    public void GetAll_ReturnsListOfOrders_OrderList()
+    {
+      Order newOrder1 = new Order("Title", "Description", 10, "Date");
+      Order newOrder2 = new Order("Title", "Description", 20, "Date");
+      List<Order> newList = new List<Order> { newOrder1, newOrder2 };
+
+      List<Order> result = List.GetAll();
+
+      CollectionAssert.AreEqual(newList, result);
+    }
   }
 }
