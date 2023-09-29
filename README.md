@@ -9,6 +9,7 @@
 * C#
 * HTML
 * CSS
+* Razor
 * .NET 6
 * ASP.NET Core MVC
 * MSTest
