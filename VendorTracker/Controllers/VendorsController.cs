@@ -31,5 +31,14 @@ namespace VendorTracker.Controllers
       return RedirectToAction("Index");
     }
 
+    // Get and Show the specified Vendor's details 
+    [HttpGet("/vendors/{vendorId}")]
+    public ActionResult Show(int vendorId)
+    {
+      Vendor foundVendor = Vendor.Find(vendorId);
+
+      return View(foundVendor);
+    }
+
   }
 }
