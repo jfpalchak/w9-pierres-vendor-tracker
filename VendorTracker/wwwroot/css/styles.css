@@ -2,7 +2,7 @@
 .content {
   border: solid black 1px;
   border-radius: 10px;
-  margin: 200px auto;
+  margin: 150px auto;
   padding: 50px;
   text-align: center;
   width: 45%;
@@ -11,6 +11,10 @@
 .display-list {
   text-align: start;
   padding-top: 20px;
+}
+
+.display-list a:hover {
+  text-decoration: underline;
 }
 
 .links {
