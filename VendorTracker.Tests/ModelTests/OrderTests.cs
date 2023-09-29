@@ -117,7 +117,7 @@ namespace VendorTracker.Tests
 
       Order result = Order.Find(2);
 
-      CollectionAssert.AreEqual(newOrder2, result);
+      Assert.AreEqual(newOrder2, result);
     }
   }
 }
