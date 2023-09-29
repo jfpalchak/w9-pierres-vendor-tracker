@@ -12,16 +12,20 @@
 <div class="container">
   <form action="/vendors/@Model.Id/orders" method="post">
     <label for="title">Enter a Title:</label>
-    <input id="title" name="title" type="text" required>
+    <br />
+    <input id="title" name="title" type="text" placeholder="Order Title" required>
     <br />
     <label for="description">Enter a Description:</label>
-    <input id="description" name="description" type="text" required>
+    <br />
+    <textarea id="description" name="description" type="text" placeholder="Order Description" required></textarea>
     <br />
     <label for="price">Enter a Price:</label>
-    <input id="price" name="price" type="number" required>
+    <br />
+    <input id="price" name="price" type="number" placeholder="Nearest Whole Dollar" required>
     <br />
     <label for="date">Enter the Date:</label>
-    <input id="date" name="date" type="text" required>
+    <br />
+    <input id="date" name="date" type="text" placeholder="--/--/----" required>
     <br />
     <br />
     <button type="submit" class="btn btn-success">Add Order</button>

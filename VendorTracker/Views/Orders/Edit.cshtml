@@ -12,15 +12,19 @@
 <div class="container">
   <form action='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id' method="post">
     <label for="newTitle">Edit Title:</label>
+    <br />
     <input id="newTitle" name="newTitle" type="text" value='@Model["order"].Title' required>
     <br />
     <label for="newDescription">Edit Description:</label>
-    <input id="newDescription" name="newDescription" type="text" value='@Model["order"].Description' required>
+    <br />
+    <textarea id="newDescription" name="newDescription" type="text" value='@Model["order"].Description' required>@Model["order"].Description</textarea>
     <br />
     <label for="newPrice">Edit Price:</label>
+    <br />
     <input id="newPrice" name="newPrice" type="number" value='@Model["order"].Price' required>
     <br />
     <label for="newDate">Edit Date:</label>
+    <br />
     <input id="newDate" name="newDate" type="text" value='@Model["order"].Date' required>
     <br />
     <br />
