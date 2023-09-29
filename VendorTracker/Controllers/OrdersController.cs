@@ -6,6 +6,7 @@ namespace VendorTracker.Controllers
 {
   public class OrdersController : Controller
   {
+    // Get and Show the specified Order's details, for a specified Vendor
     [HttpGet("/vendors/{vendorId}/orders/{orderId}")]
     public ActionResult Show(int vendorId, int orderId)
     {
@@ -19,6 +20,7 @@ namespace VendorTracker.Controllers
       return View(model);
     }
 
+    // Get the form for a New Order
     [HttpGet("/vendors/{vendorId}/orders/new")]
     public ActionResult New(int vendorId)
     {

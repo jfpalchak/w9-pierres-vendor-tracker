@@ -40,5 +40,15 @@ namespace VendorTracker.Controllers
       return View(foundVendor);
     }
 
+    // Upon submitting the form, Create a new Order for specified Vendor, and display Order on Vendor page
+    [HttpPost("/vendors/{vendorId}/orders")]
+    public ActionResult Create(int vendorId, string title, string description, float price, string date)
+    {
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order newOrder = new Order(title, description, price, date);
+      foundVendor.AddOrder(newOrder);
+
+      return View("Show", foundVendor);
+    }
   }
 }
