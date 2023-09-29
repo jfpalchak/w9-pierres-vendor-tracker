@@ -80,5 +80,18 @@ namespace VendorTracker.Controllers
       
       return RedirectToAction("Index");
     }
+
+    // Upon submitting Delete form, Delete the specified Order
+    [HttpPost("/vendors/{vendorId}/orders/{orderId}/delete")]
+    public ActionResult Delete(int vendorId, int orderId)
+    {
+      Vendor foundVendor = Vendor.Find(vendorId);
+      Order foundOrder = Order.Find(orderId);
+
+      foundVendor.Orders.Remove(foundOrder);
+      Order.GetAll().Remove(foundOrder);
+
+      return View("Show", foundVendor);
+    }
   }
 }
