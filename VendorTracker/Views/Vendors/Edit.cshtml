@@ -13,11 +13,11 @@
   <form action="/vendors/@Model.Id" method="post">
     <label for="newName">Vendor's Name:</label>
     <br />
-    <input id="newName" name="newName" type="text" placeholder="@Model.Name" required>
+    <input id="newName" name="newName" type="text" value="@Model.Name" required>
     <br />
     <label for="newDescription">Vendor's Description:</label>
     <br />
-    <input id="newDescription" name="newDescription" type="text" placeholder="@Model.Description" required>
+    <input id="newDescription" name="newDescription" type="text" value="@Model.Description" required>
     <br />
     <br />
     <button type="submit" class="btn btn-success">Update Vendor</button>
@@ -32,6 +32,6 @@
 </div>
 
 <div class="links container">
-  <h5><a href="/vendors/@Model.Id">Back to Vendor Page for @Model.Name</a></h5>
+  <h5><a href="/vendors/@Model.Id">Back to Orders</a></h5>
   <h5><a href="/vendors">Back to Vendors</a></h5>
 </div>
