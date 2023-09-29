@@ -1,0 +1,34 @@
+@{
+  Layout = "_Layout";
+}
+
+@using VendorTracker.Models;
+
+<div class="container">
+  <h1>Order Details</h1>
+  <h3>Edit Order Details</h3>
+</div>
+
+<div class="container">
+  <form action='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id' method="post">
+    <label for="newTitle">Edit Title:</label>
+    <input id="newTitle" name="newTitle" type="text" value='@Model["order"].Title'>
+    <br />
+    <label for="newDescription">Edit Description:</label>
+    <input id="newDescription" name="newDescription" type="text" value='@Model["order"].Description'>
+    <br />
+    <label for="newPrice">Edit Price:</label>
+    <input id="newPrice" name="newPrice" type="number" value='@Model["order"].Price'>
+    <br />
+    <label for="newDate">Edit Date:</label>
+    <input id="newDate" name="newDate" type="text" value='@Model["order"].Date'>
+    <br />
+    <br />
+    <button type="submit" class="btn btn-success">Update Order</button>
+  </form>
+</div>
+
+<div class="links container">
+  <h5><a href='/vendors/@Model["vendor"].Id/orders/@Model["order"].Id'>Back to Order Details</a></h5>
+  <h5><a href="/vendors">Back to Vendors</a></h5>
+</div>
