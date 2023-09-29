@@ -5,6 +5,7 @@
   margin: 200px auto;
   padding: 50px;
   text-align: center;
+  width: 45%;
 }
 
 .display-list {
@@ -22,4 +23,10 @@
 
 form {
   text-align: center;
+}
+
+@media screen and (max-width: 770px) {
+  .content {
+    width: 90%;
+  }
 }
