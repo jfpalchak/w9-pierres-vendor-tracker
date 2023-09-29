@@ -5,8 +5,11 @@ namespace VendorTracker.Controllers
 {
   public class HomeController : Controller
   {
-    // [Route("/route decoration")]
-    // public MethodToCall()
+    [HttpGet("/")]
+    public ActionResult Index()
+    {
+      return View();
+    }
 
   }
 }
