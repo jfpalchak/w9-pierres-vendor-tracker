@@ -9,8 +9,12 @@
 }
 
 .display-list {
-  text-align: start;
   padding-top: 20px;
+  padding-right: 42px;
+}
+
+.display-list ul {
+  list-style: none;
 }
 
 .display-list a:hover {
