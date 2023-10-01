@@ -80,7 +80,7 @@ namespace VendorTracker.Controllers
       return RedirectToAction("Index");
     }
 
-    // Delete the specified Order from both the Vendor's list and the Order class static list
+    // Delete the specified Order from both the Vendor's list
     [HttpPost("/vendors/{vendorId}/orders/{orderId}/delete")]
     public ActionResult Delete(int vendorId, int orderId)
     {
@@ -88,7 +88,6 @@ namespace VendorTracker.Controllers
       Order foundOrder = Order.Find(orderId);
 
       foundVendor.Orders.Remove(foundOrder);
-      Order.GetAll().Remove(foundOrder);
 
       return View("Show", foundVendor);
     }
